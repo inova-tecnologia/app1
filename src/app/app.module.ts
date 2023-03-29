@@ -3,18 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TopoComponent } from './topo/topo.component';
-import { PainelComponent } from './painel/painel.component';
-import { TentativasComponent } from './tentativas/tentativas.component';
-import { ProgressoComponent } from './progresso/progresso.component';
+import { TopComponent } from './top/top.component';
+import { PanelComponent } from './panel/panel.component';
+import { TryComponent } from './try/try.component';
+import { ProgressComponent } from './progress/progress.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TopoComponent,
-    PainelComponent,
-    TentativasComponent,
-    ProgressoComponent
+    TopComponent,
+    PanelComponent,
+    TryComponent,
+    ProgressComponent
   ],
   imports: [
     BrowserModule,
