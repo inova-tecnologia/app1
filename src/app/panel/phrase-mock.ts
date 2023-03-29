@@ -1,6 +1,6 @@
-import { Phrase } from '../shared/phrase.model'
+import { PhraseModel } from '../shared/phrase.model'
 
-const Phrases: Phrase[] = [
+export const PhrasesMock: PhraseModel[] = [
 
     {phraseUS: 'I´ve been studying Polish this year' , phraseBR: 'Eu estive estudando Polonês esse ano'},
     {phraseUS: 'I would like to watch TV on Mondays' , phraseBR: 'Eu gostaria de assistir TV nas segundas-feiras'},
