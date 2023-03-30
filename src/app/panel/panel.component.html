@@ -16,15 +16,17 @@
                     <p>{{ phrases[1].phraseBR }}</p>
 
                     <div class="form-group" id="box">
-                        <textarea class="form-control" rows="3"></textarea>
-                    </div>
+                        <textarea class="form-control" 
+                        rows="3"
+                        (input)="updateResponse($event)"></textarea>
+                    </div>     
                 </div>      
             </div>    
 
             <div class="row" id="button">
                 <div class="col">
                     <div class="d-flex flex-row-reverse">
-                        <button type="button" class="btn btn-primary">Check it!</button>
+                        <button type="button" class="btn btn-primary" (click)="verifyResponse()">Check it!</button>
                     </div>   
                 </div>
             </div>
