@@ -2,7 +2,7 @@
     <div class="jumbotron">
         <div class="row">
             <div class="col-sm-6">
-                <progress-app></progress-app>
+                <progress-app [progress]="progress"></progress-app>
             </div>        
             <div class="col-sm-6">
                 <div class="d-flex flex-row-reverse">
@@ -13,7 +13,7 @@
             <div class="row">
                 <div class="col">
                     <h6>{{ instruction }}</h6>
-                    <p>{{ phrases[1].phraseBR }}</p>
+                    <p>{{ roundPhrase.phraseBR }}</p>
 
                     <div class="form-group" id="box">
                         <textarea class="form-control" 

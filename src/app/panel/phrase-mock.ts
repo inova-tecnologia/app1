@@ -7,4 +7,4 @@ export const PhrasesMock: PhraseModel[] = [
     {phraseUS: 'How are you doing?' , phraseBR: 'Como você está?'},
     {phraseUS: 'We´ve been fishing last weekend' , phraseBR: 'Nós estivemos pescando no último final de semana'},
 
-];                 
+];                   
