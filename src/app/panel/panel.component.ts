@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PhraseModel } from '../shared/phrase.model';
 import { PhrasesMock } from './phrase-mock';
+
 @Component({    
   selector: 'panel-app',
   templateUrl: './panel.component.html',
@@ -13,6 +14,7 @@ export class PanelComponent {
   public response: string = ""; 
   public round: number = 0;
   public roundPhrase: PhraseModel;
+  public progress: number = 0; 
 
   constructor() { 
       this.roundPhrase = this.phrases[this.round];
@@ -31,13 +33,14 @@ export class PanelComponent {
 
     if(this.roundPhrase.phraseUS == this.response){
        alert('A tradução está correta!');
+       this.round++;
+       this.progress = this.progress + (100 / this.phrases.length);
+       this.roundPhrase = this.phrases[this.round];
     }else{
        alert('A tradução está incorreta!');
     }
 
-    this.round++;
-    this.roundPhrase = this.phrases[this.round];
     console.log('Verificar resposta: ', this.roundPhrase);
-  }    
+  }      
   
 }                   
