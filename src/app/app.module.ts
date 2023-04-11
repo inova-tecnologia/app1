@@ -9,7 +9,7 @@ import { TryComponent } from './try/try.component';
 import { ProgressComponent } from './progress/progress.component';
 
 @NgModule({
-  declarations: [
+  declarations: [  
     AppComponent,
     TopComponent,
     PanelComponent,
