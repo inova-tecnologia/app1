@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopComponent } from './top/top.component';
@@ -9,7 +8,7 @@ import { TryComponent } from './try/try.component';
 import { ProgressComponent } from './progress/progress.component';
 
 @NgModule({
-  declarations: [  
+  declarations: [    
     AppComponent,
     TopComponent,
     PanelComponent,

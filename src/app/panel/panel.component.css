@@ -9,6 +9,24 @@
     margin-right: -23px;
 }
 
-#button {
+#button {   
     margin-left: 11px;
 }
+
+.card {
+    margin-top: 15px;
+}
+
+.list-group-item {
+    padding: 15px;
+ }
+
+#joke {
+    margin-top: 20px;
+}
+
+ #footer {
+    margin-top: 10px;
+ }
+
+

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, OnDestroy, OnInit } from '@angular/core';
 import { PhraseModel } from '../shared/phrase.model';
 import { PhrasesMock } from './phrase-mock';
 
@@ -8,7 +8,7 @@ import { PhrasesMock } from './phrase-mock';
   styleUrls: ['./panel.component.css']
 })
 
-export class PanelComponent {
+export class PanelComponent implements OnInit, OnDestroy {
 
   public phrases: PhraseModel[] =  PhrasesMock;
   public instruction: string = "Translate the phrase:";
@@ -21,6 +21,10 @@ export class PanelComponent {
 
   constructor() { 
       this.roundPhrase = this.phrases[this.round];
+  }
+
+  ngOnDestroy() {
+    
   }
          
   ngOnInit() {
@@ -40,7 +44,6 @@ export class PanelComponent {
       }else{
         this.attempts--;
         this.attempts === -1 ? this.finishGame.emit('defeat') : "";
-        //alert("You have used up all your attempts")
       }
   }      
 }                   
