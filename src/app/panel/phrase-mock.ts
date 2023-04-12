@@ -1,5 +1,5 @@
 import { PhraseModel } from '../shared/phrase.model'
-
+   
 export const PhrasesMock: PhraseModel[] = [
 
     {phraseUS: 'I´ve been studying Polish this year' , phraseBR: 'Eu estive estudando Polonês esse ano'},

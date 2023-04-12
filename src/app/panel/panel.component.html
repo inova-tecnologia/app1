@@ -6,33 +6,49 @@
             </div>        
             <div class="col-sm-6">
                 <div class="d-flex flex-row-reverse">
-                    <try-app 
-                        [attempts]="attempts">
-                        
-                    </try-app> 
+                    <try-app [attempts]="attempts"></try-app> 
                 </div>      
             </div>       
-                      
             <div class="row">
                 <div class="col">
                     <h6>{{ instruction }}</h6>
                     <p>{{ roundPhrase.phraseBR }}</p>
-
-                    <div class="form-group" id="box">
-                        <textarea class="form-control" 
-                        rows="3"
-                        (input)="updateResponse($event)"></textarea>
+                    <div 
+                        class="form-group" 
+                        id="box">
+                            <textarea 
+                                class="form-control" 
+                                rows="3"
+                                (input)="updateResponse($event)">
+                            </textarea>
                     </div>     
                 </div>      
             </div>    
-
-            <div class="row" id="button">
+            <div 
+                class="row" 
+                id="button">
                 <div class="col">
                     <div class="d-flex flex-row-reverse">
-                        <button type="button" class="btn btn-primary" (click)="verifyResponse()">Check it!</button>
+                        <button 
+                            type="button"
+                            class="btn btn-primary" 
+                            (click)="verifyResponse()">Check it!</button>
                     </div>   
                 </div>
             </div>
         </div>
-    </div>
+        <h6 id="joke">I dare you to find out the answers of the riddle :)</h6>
+        <div class="card"
+             style="width: 350px;">    
+                <ul class="list-group list-group-flush">         
+                    <li class="list-group-item">I´ve been studying Polish this year</li>
+                    <li class="list-group-item">I would like to watch TV on Mondays</li>
+                    <li class="list-group-item">How are you doing?</li>
+                    <li class="list-group-item">We´ve been fishing last weekend</li>
+                </ul>
+          </div>
+    </div>  
 </div>
+<footer id="footer">
+</footer>
+
