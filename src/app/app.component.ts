@@ -14,5 +14,10 @@ export class AppComponent {
         this.gameInProgress = false;
         this.closureType = type;
     }
+
+    public rebuildApp(): void {
+        this.gameInProgress = true;
+        this.closureType = "";
+    }
          
 } 
