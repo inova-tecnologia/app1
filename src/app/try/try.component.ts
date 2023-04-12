@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { Heart } from '../shared/heart.model';
 @Component({        
   selector: 'try-app',
@@ -6,36 +6,33 @@ import { Heart } from '../shared/heart.model';
   styleUrls: ['./try.component.css']
 })
 
-export class TryComponent implements OnInit {
-
-  public counter: boolean[] = [true,true,true];
+export class TryComponent implements OnInit, OnChanges {
 
   @Input() public attempts: number = 0;
 
   public hearts: Heart[] = [
-    new Heart(this.counter[0]), 
-    new Heart(this.counter[1]),     
-    new Heart(this.counter[2])
-  ]
+    new Heart(true), 
+    new Heart(true),     
+    new Heart(true)
+  ] 
 
   constructor() {
   
   }
   
   public check(): void {
-      if(this.attempts === 2){
-        this.counter[0] = false;
-      }
-      if(this.attempts === 1){
-        this.counter[1] = false;
-      }
-      if(this.attempts === 0){
-        this.counter[2] = false;
+      if(this.attempts !== this.hearts.length){
+          let index = this.hearts.length - this.attempts;
+          this.hearts[index - 1].full = false;
       }
   }
 
+  ngOnChanges(){
+      this.check();
+  }
+
   ngOnInit() {
-     this.check();
+     
   }
 
 }

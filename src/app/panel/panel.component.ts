@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { PhraseModel } from '../shared/phrase.model';
 import { PhrasesMock } from './phrase-mock';
 
@@ -17,27 +17,30 @@ export class PanelComponent {
   public roundPhrase: PhraseModel;
   public progress: number = 0; 
   public attempts: number = 3;
+  @Output() public finishGame: EventEmitter<string> = new EventEmitter();
 
   constructor() { 
       this.roundPhrase = this.phrases[this.round];
   }
-
+         
   ngOnInit() {
 
   }      
 
   public updateResponse(response: Event): void {
       this.response = (<HTMLInputElement>response.target).value;
-  } 
+  }     
 
   public verifyResponse(): void {
       if(this.roundPhrase.phraseUS == this.response){
         this.round++;
         this.progress = this.progress + (100 / this.phrases.length);
         this.roundPhrase = this.phrases[this.round];
+        this.round === 4 ? this.finishGame.emit('victory') : "";
       }else{
         this.attempts--;
-        this.attempts === -1 ? alert("You have used up all your attempts") : "";
+        this.attempts === -1 ? this.finishGame.emit('defeat') : "";
+        //alert("You have used up all your attempts")
       }
   }      
 }                   
