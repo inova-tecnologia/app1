@@ -41,9 +41,11 @@ export class PanelComponent implements OnInit, OnDestroy {
         this.progress = this.progress + (100 / this.phrases.length);
         this.roundPhrase = this.phrases[this.round];
         this.round === 4 ? this.finishGame.emit('victory') : "";
+        this.response = "";
       }else{
         this.attempts--;
         this.attempts === -1 ? this.finishGame.emit('defeat') : "";
+        this.response = "";
       }
   }      
 }                   
