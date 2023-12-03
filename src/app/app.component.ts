@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 @Component({
   selector: 'app-root',  
   templateUrl: './app.component.html',
@@ -6,7 +7,6 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  
     public gameInProgress: boolean = true;
     public closureType: string = "";
 
@@ -18,6 +18,5 @@ export class AppComponent {
     public rebuildApp(): void {
         this.gameInProgress = true;
         this.closureType = "";
-    }
-         
+    }       
 } 

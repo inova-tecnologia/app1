@@ -1,5 +1,6 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { Heart } from '../shared/heart.model';
+
 @Component({        
   selector: 'try-app',
   templateUrl: './try.component.html',
@@ -16,23 +17,18 @@ export class TryComponent implements OnInit, OnChanges {
     new Heart(true)
   ] 
 
-  constructor() {
-  
-  }
+  constructor() {}
   
   public check(): void {
-      if(this.attempts !== this.hearts.length){
-          let index = this.hearts.length - this.attempts;
-          this.hearts[index - 1].full = false;
-      }
+    if(this.attempts !== this.hearts.length){
+      let index = this.hearts.length - this.attempts;
+      this.hearts[index - 1].full = false;
+    }
   }
 
   ngOnChanges(){
-      this.check();
+    this.check();
   }
 
-  ngOnInit() {
-     
-  }
-
+  ngOnInit() {}
 }
