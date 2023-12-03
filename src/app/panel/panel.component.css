@@ -2,31 +2,25 @@
     margin-top: 30px;
     background-color: #B0C4DE;
     padding: 20px;
-}
-   
+} 
 #box {
     margin-bottom: 10px;
     margin-right: -23px;
 }
-
 #button {   
     margin-left: 11px;
 }
-
 .card {
-    margin-top: 15px;
+    margin-top: 15px; 
 }
-
 .list-group-item {
     padding: 15px;
- }
-
+}
 #joke {
     margin-top: 20px;
 }
-
- #footer {
+#footer {
     margin-top: 10px;
- }
+}
 
 
